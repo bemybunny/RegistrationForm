@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.port||4000;
+const port = process.env.PORT||4000;
 const mongoose = require('mongoose');
 const User = require('./modal/user.js');
 const bcrypt = require('bcrypt');
