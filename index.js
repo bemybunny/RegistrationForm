@@ -9,7 +9,7 @@ const cors = require('cors');
 
 app.use(express.json());
 app.use(cors({
-    origin: '*'
+    origin: 'https://registrationform-nc30.onrender.com'
 }));
 require('dotenv').config();
 
