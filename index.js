@@ -9,7 +9,7 @@ const cors = require('cors');
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://form-registration-five.vercel.app'
+    origin: '*'
 }));
 require('dotenv').config();
 
@@ -52,13 +52,15 @@ app.post('/signup',async(req,res)=>{
         await newUser.save();
         const data={
             user:{
-                id:newUser.id
+                id:newUser._id,
+                name:newUser.name,
+                email:newUser.email,
             }
         }
         const token = jwt.sign(data,process.env.SECRET_KEY)
         res.json({
             success:true,
-            token
+            token,
         })
     }catch(error){
         console.log(error);
