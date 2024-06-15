@@ -9,7 +9,7 @@ const cors = require('cors');
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://registrationform-nc30.onrender.com'
+    origin: 'https://form-registration-five.vercel.app'
 }));
 require('dotenv').config();
 
